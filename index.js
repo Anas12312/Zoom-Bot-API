@@ -1,7 +1,7 @@
 const acceptCookies = require('./Services/acceptCookies')
 const auth = require('./Services/auth')
 const init = require('./Services/init')
-const search = require('./Services/search')
+const join = require('./Services/join')
 
 require('dotenv').config()
 
@@ -9,10 +9,15 @@ require('dotenv').config()
 async function run() {
     
     const { browser, page } = await init()
+
+    join(browser, page, "https://us05web.zoom.us/j/81317376491?pwd=EmzFJWfS9JNLfqYP3bj9yBWecGr3SG.1")
+
     
-    // join(browser, page)
+    
 
     await auth(browser, page)
+    await join(browser, page)
+
     
 }
 run()

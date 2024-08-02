@@ -15,6 +15,7 @@ async function init() {
     })
 
     const page = await browser.newPage()
+
     
     return {
         browser,
