@@ -1,3 +1,5 @@
+const acceptCookies = require('./Services/acceptCookies')
+const auth = require('./Services/auth')
 const init = require('./Services/init')
 const search = require('./Services/search')
 
@@ -8,7 +10,9 @@ async function run() {
     
     const { browser, page } = await init()
     
-    join(browser, page)
+    // join(browser, page)
+
+    await auth(browser, page)
     
 }
 run()

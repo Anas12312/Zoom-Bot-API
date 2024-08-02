@@ -9,8 +9,8 @@ async function init() {
             "--profile-directory=Profile 3"
         ],
         defaultViewport: {
-            height: 1400,
-            width: 3000
+            height: 900,
+            width: 1500
         }
     })
 
